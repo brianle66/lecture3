@@ -2,7 +2,7 @@
 
 {%block body%}
     <ul>
-        <form action="{% url 'tasks:index' %}" method="POST">
+        <form action="{%url 'tasks:add'%}" method="POST">
             {% csrf_token %}
             <h1>Add Task</h1>
             {{ form }}
@@ -11,3 +11,4 @@
     </ul>
     <a href="{%url 'tasks:index'%}">View Task</a>
 {% endblock %}
+
